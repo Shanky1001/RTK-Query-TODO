@@ -8,14 +8,14 @@ const Todo: FC = () => {
 
     const [title, setTitle] = useState('');
     const [addTodo] = useAddTodosMutation();
-    const { data } = useGetTodosQuery(null);
+    const { data } = useGetTodosQuery();
 
     const addTask = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const task = {
             "userId": 2,
             "title": title,
-            "completed": Boolean(Math.floor(Math.random() * 1))
+            "completed": Boolean(Math.floor(Math.random() * 1)),
         }
         setTitle('');
         addTodo(task);
@@ -28,9 +28,9 @@ const Todo: FC = () => {
                 <input type="text" className="form-control" value={title} onChange={(e) => setTitle(e.target.value)} />
                 <button className='btn btn-primary col-3' type='submit'>Add Task</button>
             </form>
-            <Incomplete data={data} />
+            {data && <Incomplete data={data} />}
             <hr />
-            <Complete data={data} />
+            {data && <Complete data={data} />}
         </div>
     )
 }

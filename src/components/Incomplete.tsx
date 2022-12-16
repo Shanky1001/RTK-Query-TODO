@@ -17,7 +17,7 @@ const Incomplete: FC<todoProps> = ({ data }): JSX.Element => {
               <form className='form-check' onChange={() => changeTodos({ ...val, completed: true })}>
                 <input className="form-check-input" type="checkbox" value="" id="flexCheck" /><label className="form-check-label" htmlFor="flexCheck">{val.title}</label>
               </form>
-              <span><i className="fa-solid fa-trash" onClick={() => deleteTodos(val.id)}></i></span>
+              <span><i className="fa-solid fa-trash" onClick={() => deleteTodos(val)}></i></span>
             </li>)
         }
         )}
