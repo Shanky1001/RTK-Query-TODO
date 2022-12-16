@@ -11,3 +11,7 @@ export interface todoReducerInter {
     state: todos[],
     action: todoAction
 }
+
+export interface todoProps {
+    data: todos[]
+}
