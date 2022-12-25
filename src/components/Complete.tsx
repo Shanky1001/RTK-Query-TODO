@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
-import { useChangeTodosMutation, useDeleteTodosMutation } from '../services/JsonPlaceholder'
-import { todoProps, todos } from '../typescript/interfaces/Interfaces'
+import React, { FC } from 'react';
+import { useChangeTodosMutation, useDeleteTodosMutation } from '../services/JsonPlaceholder';
+import { todoProps, todos } from '../typescript/interfaces/Interfaces';
 
 export const Complete: FC<todoProps> = ({ data }) => {
 
