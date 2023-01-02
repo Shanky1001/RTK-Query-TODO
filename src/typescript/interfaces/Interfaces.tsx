@@ -1,4 +1,4 @@
-import { todoAction } from "../types/Types"
+import { todoAction } from "../types/Types";
 
 export interface todos {
     "userId": number,
