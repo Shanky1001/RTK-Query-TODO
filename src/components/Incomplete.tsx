@@ -1,5 +1,5 @@
-import React, { FC } from 'react'
-import { useChangeTodosMutation, useDeleteTodosMutation, useGetTodosQuery } from '../services/JsonPlaceholder'
+import React, { FC } from 'react';
+import { useChangeTodosMutation, useDeleteTodosMutation, useGetTodosQuery } from '../services/JsonPlaceholder';
 import { todoProps, todos } from '../typescript/interfaces/Interfaces';
 
 const Incomplete: FC<todoProps> = ({ data }): JSX.Element => {
